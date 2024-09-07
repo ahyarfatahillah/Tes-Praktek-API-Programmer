@@ -1,6 +1,6 @@
 const express=require('express')
 const cors=require('cors');
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 class Server{
     #expressApp;
     #routers;
