@@ -1,6 +1,6 @@
 const express=require('express')
 const cors=require('cors');
-
+const port = process.env.PORT || 8080;
 class Server{
     #expressApp;
     #routers;
@@ -20,7 +20,7 @@ class Server{
         })
     }
     start(){
-        this.#expressApp.listen(8080,()=>{
+        this.#expressApp.listen(port, 8080,()=>{
             console.log(`Listen at port ${8080}`)
         })
     }
